@@ -11,7 +11,7 @@ trigger CaseTrigger on Case (before insert) {
     
     for(Case varCase : Trigger.new) {
         if(varAccountSingletonDAO.getAccount(varCase.AccountId).RecordTypeId == pfId) {
-            // aqui implementaria as regras
+            // instruções aqui
         }
     }
 }
