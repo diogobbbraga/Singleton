@@ -1,6 +1,6 @@
 trigger AccountTrigger on Account (after insert) {
-	  Id pfId =  Account.getSObjectType().getDescribe().getRecordTypeInfosByDeveloperName().get('PF').getRecordTypeId();
-    AccountManagerSingleton.getInstance().addInMapAccount(Trigger.newMap);
+    Id pfId =  Account.getSObjectType().getDescribe().getRecordTypeInfosByDeveloperName().get('PF').getRecordTypeId();
+    AccountSingletonDAO.getInstance().addInMapAccount(Trigger.newMap);
     
     List<Case> listCase = new List<Case>();
     
