@@ -15,7 +15,7 @@ trigger CaseTrigger on Case (before insert) {
     
     for(Case varCase : Trigger.new) {
         if(mapAccount.get(varCase.AccountId).RecordTypeId == pfId) {
-            // aqui implementaria as regras
+            // Instruções aqui
         }
     }
 }
